@@ -34,5 +34,6 @@ if ask_yes_no "do you want to install it for root?"; then
     sudo bash -c "$(declare -f install; declare -f ask_yes_no); install"
 fi
 
+pip install -r install/requirements.txt --user
 
 #eof
