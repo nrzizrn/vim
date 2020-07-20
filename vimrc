@@ -108,28 +108,6 @@ set laststatus=2   " Always show the statusline
 set encoding=utf-8 " Necessary to show unicode glyphs
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors
 
-"syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
-"let g:syntastic_quiet_messages={'level': 'warnings'}
-let g:syntastic_error_symbol='✗'
-let g:syntastic_warning_symbol='⚠'
-let g:syntastic_javascript_checker = 'jshint'
-let g:syntastic_c_checker = 'gcc'
-let g:syntastic_c_check_header = 0
-let g:syntastic_c_no_include_search = 1
-let g:syntastic_mode_map = { "mode": "active",
-            \ "active_filetypes": [],
-            \ "passive_filetypes": ["xml"]}
-
-"$ cat .vim_include - root project
-"-I corelib/
-"-I configs/
-"-I helper/
-let g:syntastic_c_config_file=".vim_include"
-let g:syntastic_cpp_config_file=".vim_include"
-let g:syntastic_cpp_check_header = 1
-
 " CVE-2019–12735
 set modelines=0
 set nomodeline
