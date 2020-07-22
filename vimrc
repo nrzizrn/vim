@@ -93,8 +93,6 @@ function! InsertTabWrapper()
     endif
     endfunction
 
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
-
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
@@ -121,5 +119,10 @@ nmap <C-c> <Plug>(pydocstring)
 autocmd BufWritePre * %s/\s\+$//e
 
 noremap <F5> :!python setup.py install <cr>
+
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+
+" autocomplete comments
+set formatoptions=r
 
 "#eof
