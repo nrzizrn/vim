@@ -42,4 +42,13 @@ fi
 
 pip install -r install/requirements.txt --user
 
+# install ctags
+git submodule update --init --recursive
+git submodule update --recursive --remote
+
+cd libs/ctags
+./autogen.sh
+./configure
+sudo make install
+
 #eof
