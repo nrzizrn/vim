@@ -62,10 +62,9 @@ set nocp
 filetype plugin on
 " " build tags of your own project with Ctrl-F12
 map <F12> :!ctags -R --sort=yes --c++-kinds=+p --fields=+iaS --extras=+q .<CR>
-set tags+=~/.vim/tags/cpp
-set tags+=~/.vim/tags/gl
-set tags+=~/.vim/tags/sdl
-set tags+=~/.vim/tags/qt4
+
+" Ctr+\ - Open the definition in a vertical split
+map <C-\> :vsplit <CR>:exec("tag ".expand("<cword>"))<CR>
 
 "
 " " OmniCppComplete
