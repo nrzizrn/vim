@@ -34,13 +34,13 @@ if ask_yes_no "do you want to install it for root?"; then
     sudo bash -c "$(declare -f install; declare -f ask_yes_no); install"
 fi
 
-if ! command -v pip &> /dev/null
+if ! command -v pip3 &> /dev/null
 then
     printf "[-] Error: install python3-pip\n"
     exit
 fi
 
-pip install -r install/requirements.txt --user
+pip3 install -r install/requirements.txt --user
 
 # install ctags
 git submodule update --init --recursive
